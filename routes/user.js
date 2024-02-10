@@ -27,7 +27,6 @@ router.post('/login',async(req,res)=>{
     res.send({ user, token });
   }catch(err){
     res.status(400).send(err);
-    console.log(err)
   }
 })
 
@@ -57,7 +56,6 @@ router.get("/profile",auth, async (req, res) => {  // auth-> second argument
   res.send(req.user)
 })
 
-// isAdmin
 router.get("/", async (req, res) => {
   try {
     const user = await User.find();
@@ -117,7 +115,6 @@ router.delete('/profile', auth , async(req,res)=>{
     res.send(req.user)
   }catch(err){
     res.status(500).send(err)
-    console.error(err)
   }
 })
 

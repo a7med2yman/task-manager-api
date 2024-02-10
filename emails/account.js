@@ -9,8 +9,6 @@ const sendWelcomeEmail = (email , name)=>{
         subject : 'thanks for joining in !',
         text : `Welcome to the app , ${name}. let me know how you get along to the app  `
     })
-    .then(() => console.log('Email sent successfully'))
-    .catch((err)=>console.log('Error',err))
 }
 
 const sendCancelationEmail = (email , name )=>{
